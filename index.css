@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+  }
+  h1,
+  h2 {
+    font-size: 20px;
+  }
+  label {
+    position: relative;
+    color: gray;
+    display: block;
+    font-weight: bolder;
+  }
+  input {
+    border-color: orange;
+  }
+  .date {
+    position: absolute;
+    left: 250px;
+    top: 80px;
+  }
+
+  .tempNow {
+    display: inline-block;
+    border: orange;
+    border-style: solid;
+    padding: 10px;
+    position: absolute;
+    left: 250px;
+    top: 140px;
+  }
+  .icon {
+    font-size: 50px;
+    position: absolute;
+    left: 350px;
+    top: 130px;
+  }
+  a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+  }
+
+  .row {
+    border: gray solid;
+  }
+
+  .row-cols-7 {
+    padding: 10px;
+    border: none;
+    position: absolute;
+    top: 250px;
+    left: 10px;
+  }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homework</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <form id="search-form">
+          <input type="text" placeholder="Enter a city..." id="city" />
+          <input type="submit" value="Search" />
+          <button>Current Location</button>
+          <br />
+        </form>
+        <h1></h1>
+      </header>
+
+      <div class="date">
+        <label for="date">Now:</label>
+        <h2></h2>
+      </div>
+
+      <div class="tempNow">
+        <a href="#">ºC</a>|<a href="#">ºF</a>
+        <div class="currentTemp">--</div>
+      </div>
+
+      <div class="icon">⛅</div>
+
+      <div class="row row-cols-7">
+        <div class="col">
+          Mon
+          <div class="row">
+            <div class="col">
+              <p>25º</p>
+              <br />
+              <p><small>14º</small></p>
+            </div>
+          </div>
+          ☀
+        </div>
+        <div class="col">
+          Tue
+          <div class="row">
+            <div class="col">
+              <p>26º</p>
+              <br />
+              <p><small> 13º</small></p>
+            </div>
+          </div>
+          ☀
+        </div>
+        <div class="col">
+          Wed
+          <div class="row">
+            <div class="col">
+              <p>24º</p>
+              <br />
+              <p><small>12º</small></p>
+            </div>
+          </div>
+          ⛅
+        </div>
+        <div class="col">
+          Thu
+          <div class="row">
+            <div class="col">
+              <p>21º</p>
+              <br />
+              <p><small>9º</small></p>
+            </div>
+          </div>
+          🌇
+        </div>
+        <div class="col">
+          Fri
+          <div class="row">
+            <div class="col">
+              <p>25º</p>
+              <br />
+              <p><small>12º</small></p>
+            </div>
+          </div>
+          ☁
+        </div>
+        <div class="col">
+          Sat
+          <div class="row">
+            <div class="col">
+              <p>23º</p>
+              <br />
+              <p><small>11º</small></p>
+            </div>
+          </div>
+          ☁
+        </div>
+        <div class="col">
+          Sun
+          <div class="row">
+            <div class="col">
+              <p>24º</p>
+              <br />
+              <p><small>12º</small></p>
+            </div>
+          </div>
+          ⛅
+        </div>
+      </div>
+
+      <script src="index.js">
+        
+      </script>
+    </div>
+  </body>
+</html>
