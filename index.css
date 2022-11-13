@@ -58,7 +58,7 @@ body {
     left: 10px;
   }
 
-  span {
-    top:300px;
+  span {position: absolute;
+    top:420px;
   }
  
