@@ -38,18 +38,17 @@ body {
     padding: 0 200px;
   }
  
-  .currentTemp {
-        padding: 5px 220px 15px;
-    font-size: 20px;
-  }
-  .tempNow {
-    font-size: 30px;
-  }
-
+ 
   a {
     text-decoration: none;
     color: orange;
     font-weight: bold;
+  }
+
+  ul {
+    list-style: none;
+    font-size: smaller;
+    
   }
 
   

@@ -23,7 +23,7 @@
         <form id="search-form">
           <input type="text" placeholder="Enter a city..." id="city" />
           <input type="submit" value="Search" />
-          <button>Current Location</button>
+        
           <br />
         </form>
         <h1></h1>
@@ -35,14 +35,17 @@
         <h2></h2>
       </div>
 
-      <div class="currentTemp">
-        <span class="tempNow"></span>   <a href="#">  ºC</a>|<a href="#">ºF</a>
+<div class="row">
+  <div class="col-6" id="currentTemp">
+        <span class="tempNow"></span><a href="#"> ºC</a>|<a href="#">ºF</a>
+        </div>
+        <div class="col-6">
+        <ul>
+          <li>Wind Speed:<span id="wind"></span>km/h</li>
+          <li>Humidity:<span id="humidity"></span>%</li>
+        </ul>
 </div>
-
-      
-      
-       
-    </div>
+</div>
         <br>
 
       <script src="index.js"></script>
