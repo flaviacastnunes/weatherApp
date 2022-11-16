@@ -6,37 +6,32 @@ function searching(event) {
     let h1 = document.querySelector("h1");
     h1.innerHTML = city;
     axios.get(apiUrl).then(showTemperature);
+    
   }
 
   function showTemperature(response) {
+    console.log(response.data); 
     let currentTemp = document.querySelector(".tempNow");
     currentTemp.innerHTML = Math.round(response.data.main.temp);
+    let updatedDate = document.querySelector("h2");
+    updatedDate.innerHTML = formatDate(response.data.dt*1000);
+    let wind = document.querySelector("#wind");
+    wind.innerHTML= response.data.wind.speed;
+    let humidity = document.querySelector("#humidity");
+    humidity.innerHTML= response.data.main.humidity;
   }
 
-  let form = document.querySelector("form");
-  form.addEventListener("submit", searching);
-
-  let button = document.querySelector("button");
-  button.addEventListener("click", searchPosition);
-  
-  function searchPosition(event) {
-    event.preventDefault();
-    navigator.geolocation.getCurrentPosition(showPosition)
-  }
-  
-  function showPosition(position) {
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-    let apiKey = "a1140261bdb0b194c8ae933d2f478860";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-
-    axios.get(apiUrl).then(showTemperature);
-  }
-
-    
-  let hour = new Date().getHours();
-  let minutes = new Date().getMinutes();
-  let days = [
+  function formatDate(timestamp) {
+    let date = new Date(timestamp);
+    let hour = date.getHours();
+    if (hour <10) {
+      hour= `0${hour}`;
+    }
+    let minutes = date.getMinutes();
+    if (minutes <10) {
+      minutes= `0${minutes}`;
+    }
+    let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -45,13 +40,9 @@ function searching(event) {
     "Friday",
     "Saturday",
   ];
-  let day = days[new Date().getDay()];
-  let h2 = document.querySelector("h2");
+    let day = days[date.getDay()];
+    return `${day}, ${hour}:${minutes}`;    
+   } 
 
-  if (minutes < 10) {
-    let date = `${day}, ${hour}:0${minutes}`;
-    h2.innerHTML = date;
-  } else {
-    let date = `${day}, ${hour}:${minutes}`;
-    h2.innerHTML = date;
-  }
+  let form = document.querySelector("form");
+  form.addEventListener("submit", searching);
