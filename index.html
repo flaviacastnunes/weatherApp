@@ -10,13 +10,15 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link href="src/styles.css" />
+    
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="index.css"/>
   </head>
 
   <body>
+    
     <div class="container">
+      <div class="appWrapper">
       <header>
         <form id="search-form">
           <input type="text" placeholder="Enter a city..." id="city" />
@@ -25,109 +27,30 @@
           <br />
         </form>
         <h1></h1>
+        <div class="icon"> ⛅</div>
       </header>
 
       <div class="date">
-        <label for="date">Now:</label>
+        <label for="date">Last Update:</label>
         <h2></h2>
       </div>
 
-      <div class="tempNow">
-        <a href="#">ºC</a>|<a href="#">ºF</a>
-        <div class="currentTemp">--</div>
-      </div>
+      <div class="currentTemp">
+        <span class="tempNow"></span>   <a href="#">  ºC</a>|<a href="#">ºF</a>
+</div>
 
-      <div class="icon">⛅</div>
-
-      <div class="row row-cols-7">
-        <div class="col">
-          Mon
-          <div class="row">
-            <div class="col">
-              <p>25º</p>
-              <br />
-              <p><small>14º</small></p>
-            </div>
-          </div>
-          ☀
-        </div>
-        <div class="col">
-          Tue
-          <div class="row">
-            <div class="col">
-              <p>26º</p>
-              <br />
-              <p><small> 13º</small></p>
-            </div>
-          </div>
-          ☀
-        </div>
-        <div class="col">
-          Wed
-          <div class="row">
-            <div class="col">
-              <p>24º</p>
-              <br />
-              <p><small>12º</small></p>
-            </div>
-          </div>
-          ⛅
-        </div>
-        <div class="col">
-          Thu
-          <div class="row">
-            <div class="col">
-              <p>21º</p>
-              <br />
-              <p><small>9º</small></p>
-            </div>
-          </div>
-          🌇
-        </div>
-        <div class="col">
-          Fri
-          <div class="row">
-            <div class="col">
-              <p>25º</p>
-              <br />
-              <p><small>12º</small></p>
-            </div>
-          </div>
-          ☁
-        </div>
-        <div class="col">
-          Sat
-          <div class="row">
-            <div class="col">
-              <p>23º</p>
-              <br />
-              <p><small>11º</small></p>
-            </div>
-          </div>
-          ☁
-        </div>
-        <div class="col">
-          Sun
-          <div class="row">
-            <div class="col">
-              <p>24º</p>
-              <br />
-              <p><small>12º</small></p>
-            </div>
-          </div>
-          ⛅
-        </div>
-       
       
-      </div>
-        <br>
-     
-
-      <script src="index.js">
-        
-      </script>
+      
+       
     </div>
-    <span><a href="https://github.com/flaviacastnunes/weatherApp">Open source code </a>by Flávia Nunes</span>
-    
-  </body>
+        <br>
+
+      <script src="index.js"></script>
+
+    </div>
+  </div>
+    <span>
+      <a href="https://github.com/flaviacastnunes/weatherApp">Open source code </a>by Flávia Nunes
+    </span>
+     </body>
 </html>

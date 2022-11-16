@@ -1,64 +1,56 @@
+.appWrapper {margin-top:40px;
+  border: 3px orange solid;
+  border-radius: 5px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
   }
+
   header {
-    position: absolute;
-    left: 10px;
-    top: 20px;
+    padding: 30px 20px 0 ;
   }
-  h1,
+
+  h1 {
+    text-transform: capitalize;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 40px;
+    padding: 0 50px;
+  }
+
   h2 {
     font-size: 20px;
   }
+
   label {
-    position: relative;
+    font-size: 13px;
     color: gray;
-    display: block;
     font-weight: bolder;
   }
-  input {
-    border-color: orange;
-  }
+
   .date {
-    position: absolute;
-    left: 250px;
-    top: 80px;
+    padding: 0 200px;
+  }
+ 
+  .currentTemp {
+        padding: 5px 220px 15px;
+    font-size: 20px;
+  }
+  .tempNow {
+    font-size: 30px;
   }
 
-  .tempNow {
-    display: inline-block;
-    border: orange;
-    border-style: solid;
-    padding: 10px;
-    position: absolute;
-    left: 250px;
-    top: 140px;
-  }
-  .icon {
-    font-size: 50px;
-    position: absolute;
-    left: 350px;
-    top: 130px;
-  }
   a {
     text-decoration: none;
-    color: rgb(255, 89, 0);
+    color: orange;
     font-weight: bold;
   }
 
-  .row {
-    border: gray solid;
-  }
-
-  .row-cols-7 {
-    padding: 10px;
-    border: none;
-    position: absolute;
-    top: 250px;
-    left: 10px;
-  }
-
-  span {position: absolute;
-    top:420px;
-  }
+  
  

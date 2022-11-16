@@ -9,8 +9,8 @@ function searching(event) {
   }
 
   function showTemperature(response) {
-    let currentTemp = document.querySelector(".currentTemp");
-    currentTemp.innerHTML = response.data.main.temp;
+    let currentTemp = document.querySelector(".tempNow");
+    currentTemp.innerHTML = Math.round(response.data.main.temp);
   }
 
   let form = document.querySelector("form");
