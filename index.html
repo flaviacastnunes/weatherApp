@@ -23,11 +23,15 @@
         <form id="search-form">
           <input type="text" placeholder="Enter a city..." id="city" />
           <input type="submit" value="Search" />
-        
-          <br />
+           <br />
         </form>
-        <h1></h1>
-        <div class="icon"> ⛅</div>
+
+        <h1>
+         
+        </h1>
+        <div class="description"></div>
+        <div ><img src="http://openweathermap.org/img/wn/10d@2x.png"
+          class="icon"/></div>
       </header>
 
       <div class="date">
@@ -36,13 +40,14 @@
       </div>
 
 <div class="row">
-  <div class="col-6" id="currentTemp">
-        <span class="tempNow"></span><a href="#"> ºC</a>|<a href="#">ºF</a>
+  <div class="col-4">
+        <span class="tempNow"></span>
+        <a href="#" id="celsius-link" class="active"> ºC</a>|<a href="#" id="fahrenheit-link">ºF</a>
         </div>
-        <div class="col-6">
+        <div class="col-8">
         <ul>
-          <li>Wind Speed:<span id="wind"></span>km/h</li>
-          <li>Humidity:<span id="humidity"></span>%</li>
+          <li>Wind Speed: <span id="wind"></span>km/h</li>
+          <li>Humidity: <span id="humidity"></span>%</li>
         </ul>
 </div>
 </div>

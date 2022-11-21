@@ -10,16 +10,21 @@ function searching(event) {
   }
 
   function showTemperature(response) {
-    console.log(response.data); 
+    celsiusTemp=response.data.main.temp;
     let currentTemp = document.querySelector(".tempNow");
-    currentTemp.innerHTML = Math.round(response.data.main.temp);
+    currentTemp.innerHTML = Math.round(celsiusTemp);
     let updatedDate = document.querySelector("h2");
     updatedDate.innerHTML = formatDate(response.data.dt*1000);
     let wind = document.querySelector("#wind");
     wind.innerHTML= response.data.wind.speed;
     let humidity = document.querySelector("#humidity");
     humidity.innerHTML= response.data.main.humidity;
-  }
+    let icon = document.querySelector(".icon");
+    icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    let description = document.querySelector(".description");
+    description.innerHTML= response.data.weather[0].description;
+    
+      }
 
   function formatDate(timestamp) {
     let date = new Date(timestamp);
@@ -44,5 +49,44 @@ function searching(event) {
     return `${day}, ${hour}:${minutes}`;    
    } 
 
+
+   function handleSubmit(event) {
+    event.preventDefault();
+    let city = document.querySelector("#city");
+    searching(city.value);
+   }
+
+let convertFahrenheit = document.querySelector("#fahrenheit-link");
+  convertFahrenheit.addEventListener("click", showFahrenheit);
+
+function showFahrenheit(event) {
+    event.preventDefault();
+    convertCelsius.classList.remove("active");
+    convertFahrenheit.classList.add("active");
+    let currentTemp = document.querySelector(".tempNow");
+    let fahrenheitTemp = celsiusTemp*9/5+32;
+    currentTemp.innerHTML= Math.round(fahrenheitTemp); 
+    }
+
+let convertCelsius = document.querySelector("#celsius-link");
+    convertCelsius.addEventListener("click", showCelsius);
+
+    function showCelsius(event) {
+      event.preventDefault();
+      let currentTemp = document.querySelector(".tempNow");
+      currentTemp.innerHTML= Math.round(celsiusTemp); 
+      convertCelsius.classList.add("active");
+      convertFahrenheit.classList.remove("active");
+      }
+
+    
+
+let celsiusTemp=null;
+
   let form = document.querySelector("form");
   form.addEventListener("submit", searching);
+
+
+  
+
+  

@@ -11,10 +11,11 @@ body {
 
   header {
     padding: 30px 20px 0 ;
+    text-transform: capitalize;
   }
 
   h1 {
-    text-transform: capitalize;
+    
     font-size: 30px;
     padding: 10px;
   }
@@ -40,16 +41,26 @@ body {
  
  
   a {
-    text-decoration: none;
+   text-decoration: none;
     color: orange;
     font-weight: bold;
   }
+  a:hover{color:black;
+  }
+.row {margin: 0 100px;
 
-  ul {
+}
+  ul { 
     list-style: none;
     font-size: smaller;
-    
-  }
+          }
+
+ .tempNow {font-size: 30px; }
+
+ .active {color:black;
+cursor: default;}
+
+ .active:hover {color:black;}
 
   
  
