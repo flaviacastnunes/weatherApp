@@ -59,12 +59,7 @@ body {
 
  .tempNow {font-size: 30px; }
 
- .active {color:black;
-cursor: default;}
-
- .active:hover {color:black;}
-
-  .forecastWeather {
+.forecastWeather {
     margin:40px 20px;
     font-size:15px;
   }

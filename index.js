@@ -85,36 +85,9 @@ function searching(event) {
     event.preventDefault();
     let city = document.querySelector("#city");
     searching(city.value);
-   }
-
-let convertFahrenheit = document.querySelector("#fahrenheit-link");
-  convertFahrenheit.addEventListener("click", showFahrenheit);
-
-function showFahrenheit(event) {
-    event.preventDefault();
-    convertCelsius.classList.remove("active");
-    convertFahrenheit.classList.add("active");
-    let currentTemp = document.querySelector(".tempNow");
-    let fahrenheitTemp = celsiusTemp*9/5+32;
-    currentTemp.innerHTML= Math.round(fahrenheitTemp); 
-    }
-
-let convertCelsius = document.querySelector("#celsius-link");
-    convertCelsius.addEventListener("click", showCelsius);
-
-    function showCelsius(event) {
-      event.preventDefault();
-      let currentTemp = document.querySelector(".tempNow");
-      currentTemp.innerHTML= Math.round(celsiusTemp); 
-      convertCelsius.classList.add("active");
-      convertFahrenheit.classList.remove("active");
-      }
-
-    
+   } 
 
 let celsiusTemp=null;
 
   let form = document.querySelector("form");
   form.addEventListener("submit", searching);
-
-displayForecast();
