@@ -1,4 +1,7 @@
-function searching(event) {
+  let form = document.querySelector("form");
+  form.addEventListener("submit", searching);
+  
+  function searching(event) {
     event.preventDefault();
     let apiKey = "a43564c91a6c605aeb564c9ed02e3858";
     let city = document.querySelector("#city").value;
@@ -39,7 +42,6 @@ function searching(event) {
          }
 
  function displayForecast(response){
-  console.log(response.data);
         let forecast = response.data.daily;
         let forecastElement = document.querySelector("#forecast");
         let forecastHTML = `<div class="row">`;
@@ -89,5 +91,4 @@ function searching(event) {
 
 let celsiusTemp=null;
 
-  let form = document.querySelector("form");
-  form.addEventListener("submit", searching);
+
